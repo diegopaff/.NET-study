@@ -13,7 +13,7 @@ Console.ReadLine(); //=> Pide un input desde la consola.
 
 ### Variables y tipos de datos
 
-- int -> Guarda números enteros (4 bytes)
+- int -> Guarda números enteros (4 bytes) (desde -2147483648 a 2147483647)
 - long -> Guarda números enteros más grandes (8 bytes)
 - float -> Guarda numeros con fraccion (4 bytes)
 - double -> Guarda numeros con más números después de la coma (8 bytes)
@@ -79,7 +79,7 @@ Sirve mucho para inicializar variables en null, porque no sabemos que valor va a
 
 ```c#
 // se pone un símbolo de pregunta despúes del tipo que queremos guardar como null
-string? var = null;
+string? a = null;
 
 ```
 
@@ -150,6 +150,8 @@ Devuelve true or false
 
 ```c#
 // Struct - Datos con utilidad
+// Cuando dice public quiere decir que cualquier parte del código puede acceder a ese elemento.
+
 public struct Coords //crea un tipo de clase Coords
 {
 
