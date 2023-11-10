@@ -1,14 +1,15 @@
 # Intruducción a C#
 
 ### Comandos útiles de la consola.
+
 Entradas y salidas por consola
+
 ```c#
 Console.WriteLine("datos"); // => Imprime en la consola y salta de línea.
 Console.Write("datos"); // => Imprime en la consola sin saltar a una nueva línea.
-Console.ReadLine(); //=> Pide un input desde la consola. 
+Console.ReadLine(); //=> Pide un input desde la consola.
 
 ```
-
 
 ### Variables y tipos de datos
 
@@ -23,15 +24,15 @@ Console.ReadLine(); //=> Pide un input desde la consola.
 ```c#
 // se inicializan utilizando el tipo de variable antes del nombre que le vamos a asignar
 
-int precios = 700; // creamos la variable precios 
+int precios = 700; // creamos la variable precios
 
 long l = 10;
 
 float precio = 1.555f; // en los float hay que agregar una "f" al final del número para que sepa que es un flotante.
 
-char h = 'ae523'; 
+char h = 'ae523';
 
-bool login = true; // solo puede ser true o false 
+bool login = true; // solo puede ser true o false
 
 string nombre = "diego" // el string se guarda dentro de comillas dobles.
 
@@ -40,17 +41,20 @@ string nombre = "diego" // el string se guarda dentro de comillas dobles.
 ### Conversión de datos
 
 **Implícita:**
+
 - Automática
 - De menores a mayores tamaños
-- char -> int -> long -> float -> double 
+- char -> int -> long -> float -> double
 
 **Explícita:**
+
 - Manual
 - De mayores a menores
 - double -> float -> long -> int -> char
 
 **Manual**
-Ejemplo para convertir string to int, de manera similar para el resto de tipos. 
+Ejemplo para convertir string to int, de manera similar para el resto de tipos.
+
 ```c#
 // string to int
 Convert.ToInt32(valor); //ToInt32 convierte de string a entero
@@ -60,28 +64,29 @@ Convert.ToInt32(valor); //ToInt32 convierte de string a entero
 ### Constantes
 
 utilizando la palabra reservada const antes de declarar la variable.
-Es un valor que no se puede cambiar o resasignar durante el resto del código. Sólo lectura. 
+Es un valor que no se puede cambiar o resasignar durante el resto del código. Sólo lectura.
 
 ```c#
 
-const string var = "Diego"; // fijo como constante la declaración. 
+const string var = "Diego"; // fijo como constante la declaración.
 
 ```
 
 ### Null
 
 Es un tipo de valor que le puedo asignar a una variable.
-Sirve mucho para inicializar variables en null, porque no sabemos que valor va a tener esa variable. 
+Sirve mucho para inicializar variables en null, porque no sabemos que valor va a tener esa variable.
 
 ```c#
 // se pone un símbolo de pregunta despúes del tipo que queremos guardar como null
-string? var = null; 
+string? var = null;
 
 ```
 
 ### Operadores
 
 **Arigméticos**
+
 ```c#
 + // suma
 - // resta
@@ -96,11 +101,12 @@ i++ // se imprime y después se incrementa.
 ```
 
 **De asignación**
+
 ```c#
 += // le suma la cantidad ej: x += 3  -> x = x + 3
--= 
-*= 
-/= 
+-=
+*=
+/=
 %=
 &=
 |=
@@ -108,8 +114,10 @@ i++ // se imprime y después se incrementa.
 >>=
 <<=
 ```
+
 **De comparación**
 Devuelve true or false
+
 ```c#
 == // igual a
 != // distinto de
@@ -122,6 +130,7 @@ Devuelve true or false
 
 **Operadores Lógicos**
 Devuelve true or false
+
 ```c#
 && // devuelve true si ambas declaraciones son true
 || // devuelve true si al menos una de las declaraciones es true
@@ -166,6 +175,7 @@ public readonly double Sum()
     return X + Y;
 }
 ```
+
 ** Mutación no destructiva **
 
 Se utiliza la expresión with para generar una copia de una instancia de tipo estructura y modificar algún campo.
@@ -200,9 +210,3 @@ public static void Main()
 ```
 
 Esto es algo nuevo
-
-
-
-
-
-
