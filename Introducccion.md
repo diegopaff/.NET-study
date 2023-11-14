@@ -138,6 +138,14 @@ Devuelve true or false
 
 ```
 
+**Plantilla Literal**
+Para escribir variables dentro de comillas de string
+
+```c#
+Console.WriteLine($"Resultado: {nombreVariable}");
+
+```
+
 ### Estructura de Datos en C#
 
 **Definición:**
@@ -178,10 +186,6 @@ public readonly double Sum()
 }
 ```
 
-** Mutación no destructiva **
-
-Se utiliza la expresión with para generar una copia de una instancia de tipo estructura y modificar algún campo.
-
 ```c#
 public readonly struct Coords
 {
@@ -197,6 +201,10 @@ public readonly struct Coords
     public override string ToString() => $"({X}, {Y})";
 }
 
+** Mutación no destructiva **
+
+Se utiliza la expresión with para generar una copia de una instancia de tipo estructura y modificar algún campo.
+
 public static void Main()
 {
     var p1 = new Coords(0, 0);
@@ -211,4 +219,84 @@ public static void Main()
 
 ```
 
-Esto es algo nuevo
+** Condicionales if - else **
+
+```c#
+// IF - ELSE
+int test = 5;
+
+if (test < 10)
+{
+    //body of if
+}
+else
+{
+    //body of else
+}
+
+```
+
+** Bucles, While, Do While, For **
+
+- Son estructuras para implementar lógica
+- Permiten bifurcar el flujo del4 programa de acuerdo a diversos escenarios.
+- Reducen las líneas de código que necesitamos ante tareas repetitivas.
+
+** while **
+
+```c#
+// WHILE
+int j = 0;
+while (j < 10)
+{
+    Console.Write(j);
+    j++;
+}
+//---> 0123456789
+
+```
+
+** for **
+
+```c#
+// FOR
+for (i = 0; i <10; i++)
+{
+    Console.Write(i);
+
+}
+//---> 0123456789
+
+```
+
+** Do..while **
+La diferencia con while es que el do..while por lo menos ejecuta siempre una vez el código de adentro porque chequea la condición después.
+
+```c#
+// DO-WHILE
+int j = 11;
+do
+{
+    Console.Write(j);
+    j++;
+}
+while (j < 10);
+//---> 11
+
+```
+
+** Foreach **
+Nos permite iterar facilmente en colecciones.
+Ventajas:
+
+- No es necesario pasarle el largo de la lista
+
+```c#
+// FOREACH -
+var names = new List<string> { "Pepe", "Ana", "Felipe"}
+foreach (var elemento in names)
+{
+    Console.WriteLine(elemento);
+}
+
+```
