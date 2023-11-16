@@ -177,13 +177,16 @@ public struct Coords //crea un tipo de clase Coords
 
 ```
 
-**readonly - No se puede modificar, es como crear una constante pero en el entorno de clases**
+**readonly**
+
+No se puede modificar, es como crear una constante pero en el entorno de clases
 
 ```c#
 public readonly double Sum()
 {
     return X + Y;
 }
+
 ```
 
 ```c#
@@ -200,11 +203,13 @@ public readonly struct Coords
 
     public override string ToString() => $"({X}, {Y})";
 }
+```
 
 ** Mutación no destructiva **
 
 Se utiliza la expresión with para generar una copia de una instancia de tipo estructura y modificar algún campo.
 
+```c#
 public static void Main()
 {
     var p1 = new Coords(0, 0);
@@ -219,10 +224,12 @@ public static void Main()
 
 ```
 
-** Condicionales if - else **
+### CONDICIONALES
+
+**_ if - else _**
 
 ```c#
-// IF - ELSE
+
 int test = 5;
 
 if (test < 10)
@@ -236,13 +243,36 @@ else
 
 ```
 
-** Bucles, While, Do While, For **
+**_ switch _**
+
+```c#
+bool c = true;
+switch(c)
+{
+    case true:
+        Console.WriteLine("true");
+        break;
+    case false:
+        break;
+    default:
+        Console.WriteLine("false");
+}
+```
+
+**_ break y continue _**
+
+- break: Termina la sección de iteración del bucle más próxima.
+- continue: Empieza una nueva interación del bucle más próximo.
+
+### BUCLES
+
+**_ Bucles, While, Do While, For _**
 
 - Son estructuras para implementar lógica
 - Permiten bifurcar el flujo del4 programa de acuerdo a diversos escenarios.
 - Reducen las líneas de código que necesitamos ante tareas repetitivas.
 
-** while **
+**_ while _**
 
 ```c#
 // WHILE
@@ -286,6 +316,7 @@ while (j < 10);
 ```
 
 ** Foreach **
+
 Nos permite iterar facilmente en colecciones.
 Ventajas:
 
