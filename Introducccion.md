@@ -331,3 +331,17 @@ foreach (var elemento in names)
 }
 
 ```
+
+Math
+
+```c#
+
+Math.Max(x,y); // -> devuelve el máximo de dos números;
+Math.Min(x,y); // -> devuelve el mínimo de dos números;
+Math.Sqrt(x); // -> raiz cuadrada
+Math.Abs(x); // -> valor absoluto
+Math.Round(); // -> redondea el número al entero más cercano
+Math.Ceiling() // -> redondea hacia arriba
+Math.Floor() // -> redondea hacia abajo
+
+```
