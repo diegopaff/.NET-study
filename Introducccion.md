@@ -83,6 +83,49 @@ string? a = null;
 
 ```
 
+### Strings
+
+Una variable string se inicializa con la palabra string
+
+-Se puede concatenar strings con un +
+
+**Plantilla Literal**
+Para escribir variables dentro de comillas de string
+
+```c#
+Console.WriteLine($"Resultado: {nombreVariable}");
+
+```
+
+**Caracteres escapados**
+Son caracteres especiales que realizan cosas dentro de mi texto.
+\ ---> permite cualquier caracter despues del backlash
+\n --> salto de línea
+\t ---> tabulación
+\r ---> filas
+@ ---> multilinea funciona con enter sin agregar \n
+
+**Métodos en strings**
+
+```c#
+// Substring
+string miCadena = "Este es mi mensaje";
+string miCadena2 = miCadena.Substring(0,10);
+Console.WriteLine(miCadena2); // --> Este es mi
+
+// Replace
+string miCadena = "Este es mi mensaje";
+string miCadena2 = miCadena.Replace("mensaje","podcast");
+Console.WriteLine(miCadena2); // --> Este es mi podcast
+
+// Trim
+string miCad = "   Hola es es un string     ";
+Console.WriteLine(miCad.Trim()) // --> Hola es es un string
+
+// IndexOf
+int index = miCadena.IndexOf('m'); // ---> 10
+```
+
 ### Operadores
 
 **Arigméticos**
@@ -135,14 +178,6 @@ Devuelve true or false
 && // devuelve true si ambas declaraciones son true
 || // devuelve true si al menos una de las declaraciones es true
 ! // not -> devuelve el resultado opuesto
-
-```
-
-**Plantilla Literal**
-Para escribir variables dentro de comillas de string
-
-```c#
-Console.WriteLine($"Resultado: {nombreVariable}");
 
 ```
 
@@ -226,7 +261,7 @@ public static void Main()
 
 ### CONDICIONALES
 
-**_ if - else _**
+**if - else**
 
 ```c#
 
@@ -243,7 +278,7 @@ else
 
 ```
 
-**_ switch _**
+**switch**
 
 ```c#
 bool c = true;
@@ -259,20 +294,20 @@ switch(c)
 }
 ```
 
-**_ break y continue _**
+**break y continue**
 
 - break: Termina la sección de iteración del bucle más próxima.
 - continue: Empieza una nueva interación del bucle más próximo.
 
 ### BUCLES
 
-**_ Bucles, While, Do While, For _**
+**Bucles, While, Do While, For**
 
 - Son estructuras para implementar lógica
 - Permiten bifurcar el flujo del4 programa de acuerdo a diversos escenarios.
 - Reducen las líneas de código que necesitamos ante tareas repetitivas.
 
-**_ while _**
+**while**
 
 ```c#
 // WHILE
@@ -286,7 +321,7 @@ while (j < 10)
 
 ```
 
-** for **
+**for**
 
 ```c#
 // FOR
@@ -299,7 +334,7 @@ for (i = 0; i <10; i++)
 
 ```
 
-** Do..while **
+**Do..while**
 La diferencia con while es que el do..while por lo menos ejecuta siempre una vez el código de adentro porque chequea la condición después.
 
 ```c#
@@ -315,7 +350,7 @@ while (j < 10);
 
 ```
 
-** Foreach **
+**Foreach**
 
 Nos permite iterar facilmente en colecciones.
 Ventajas:
@@ -332,7 +367,7 @@ foreach (var elemento in names)
 
 ```
 
-Math
+**Math**
 
 ```c#
 
@@ -343,5 +378,19 @@ Math.Abs(x); // -> valor absoluto
 Math.Round(); // -> redondea el número al entero más cercano
 Math.Ceiling() // -> redondea hacia arriba
 Math.Floor() // -> redondea hacia abajo
+
+```
+
+### ARRAYS
+
+```c#
+// para declarar un array
+char[] letters = { '#', '$', '&'};
+// para acceder a cualquier posición de un array
+Console.WriteLine(letters[0]); //--> #
+
+// para acceder a una posición de un string es lo mismo
+string str = "Manolo";
+Console.WriteLine(str[2]); // ---> n
 
 ```
