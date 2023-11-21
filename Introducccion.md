@@ -95,6 +95,9 @@ Para escribir variables dentro de comillas de string
 ```c#
 Console.WriteLine($"Resultado: {nombreVariable}");
 
+//Para inicializar un string vacío
+string nombre = String.Empty;
+
 ```
 
 **Caracteres escapados**
@@ -106,6 +109,7 @@ Son caracteres especiales que realizan cosas dentro de mi texto.
 @ ---> multilinea funciona con enter sin agregar \n
 
 **Métodos en strings**
+Algunos de los más comunes al iniciar
 
 ```c#
 // Substring
@@ -124,6 +128,9 @@ Console.WriteLine(miCad.Trim()) // --> Hola es es un string
 
 // IndexOf
 int index = miCadena.IndexOf('m'); // ---> 10
+
+// Append
+
 ```
 
 ### Operadores
@@ -393,4 +400,16 @@ Console.WriteLine(letters[0]); //--> #
 string str = "Manolo";
 Console.WriteLine(str[2]); // ---> n
 
+// para crear array de strings
+string[] names = new string[2];
+names[0]= "John Doe";
+names[1]= "Diego";
+
+// ordenar un array
+int[] numbers = {4, 3, 8, 0, 5};
+Array.Sort(numbers); // ordena el array de ints
+
+// Array 2D
+int[,] miArray2D = new int[2,2]; // 1  2
+                                 // 3  4
 ```
