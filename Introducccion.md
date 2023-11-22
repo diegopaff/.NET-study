@@ -6,7 +6,7 @@ Entradas y salidas por consola
 
 ```c#
 Console.WriteLine("datos"); // => Imprime en la consola y salta de línea.
-Console.Write("datos"); // => Imprime en la consola sin saltar a una nueva línea.
+Console.WriteLine("Salvado con nota excelente");("datos"); // => Imprime en la consola sin saltar a una nueva línea.
 Console.ReadLine(); //=> Pide un input desde la consola.
 
 ```
@@ -321,7 +321,7 @@ switch(c)
 int j = 0;
 while (j < 10)
 {
-    Console.Write(j);
+    Console.WriteLine("Salvado con nota excelente");(j);
     j++;
 }
 //---> 0123456789
@@ -334,7 +334,7 @@ while (j < 10)
 // FOR
 for (i = 0; i <10; i++)
 {
-    Console.Write(i);
+    Console.WriteLine("Salvado con nota excelente");(i);
 
 }
 //---> 0123456789
@@ -349,7 +349,7 @@ La diferencia con while es que el do..while por lo menos ejecuta siempre una vez
 int j = 11;
 do
 {
-    Console.Write(j);
+    Console.WriteLine("Salvado con nota excelente");(j);
     j++;
 }
 while (j < 10);
@@ -412,4 +412,94 @@ Array.Sort(numbers); // ordena el array de ints
 // Array 2D
 int[,] miArray2D = new int[2,2]; // 1  2
                                  // 3  4
+```
+
+### FUNCIONES
+
+```c#
+calcularCuadrado(2); // --> 4
+
+int calcularCuadrado(int n)
+{
+    return n * n;
+}
+
+
+// funciones void -> no devuelven ningún valor, solo ejecutan código
+void calcularAprobado(int nota)
+{
+    if (nota < 5)
+    {
+        Console.WriteLine("Has perdiddo");
+    }
+    else if ( nota > 4 && nota < 7)
+    {
+        Console.WriteLine("Salvado con nota regular");
+    }
+    else
+    {
+        Console.WriteLine("Salvado con nota excelente");
+    }
+}
+
+
+// funciones anónimas -> no tienen nombre, se llaman expresiones landa? lambda?
+// (input-parameters) => expression
+// muy parecido a las arroy functions en javascript
+int[] numbers = {2, 3 ,4, 5};
+var squaredNumbers = numbes.Select(x => x * x);
+Console.WriteLine(string.Join(" " + squaredNumbers));
+
+```
+
+### MÉTODOS
+
+Los métodos son funciones que se declaran adentro de un objeto. Se declaran igual.
+
+**Métodos estáticos -> static**
+Es un método de clase, se puede usar aunque no se inicialize un objeto con esa clase. Se puede usar cuando no esta definido el objeto.
+
+```c#
+// en vez de ->
+//var moto = new Motos();
+//moto.Arrancar();
+
+// llamamos directamenta a la clase y su método
+Motos.Arrancar();
+
+class Motos
+{
+    public static void Arrancar() // al ser static puedo utilizarlo sin instanciar el objeto
+    {
+        Console.WriteLine("Arranca");
+    }
+}
+```
+
+**Sobrecarga de métodos**
+Hay una definición para varios tipos de parámetros. Se crea el mismo método pero contemplando otros posibles tipos de valores de entrada y salida.
+
+Ejemplo
+
+```c#
+
+class Motos
+{
+    public static void Arrancar() // al ser static puedo utilizarlo sin instanciar el objeto
+    {
+        Console.WriteLine("Arranca");
+    }
+
+    public int EcharGasolina(int litros)     // si se ingresan int
+    {                                        //         |
+        int nivelDeposito = 20 + litros;     //         |
+        return nivelDeposito;                //    (mismo método)
+    }                                        //         |
+                                             //         |
+    public float EcharGasolina(float litros) // si se usan float
+    {
+        float nivelDeposito = 20 + litros;
+        return nivelDeposito;
+    }
+}
 ```
