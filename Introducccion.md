@@ -140,7 +140,7 @@ EscribirNumeroReal(float n)
 
 ## Operadores
 
-**Arigméticos**
+### Arigméticos
 
 ```c#
 + // suma
@@ -155,7 +155,7 @@ EscribirNumeroReal(float n)
 i++ // se imprime y después se incrementa.
 ```
 
-**De asignación**
+### De asignación
 
 ```c#
 += // le suma la cantidad ej: x += 3  -> x = x + 3
@@ -170,7 +170,8 @@ i++ // se imprime y después se incrementa.
 <<=
 ```
 
-**De comparación**
+### De comparación
+
 Devuelve true or false
 
 ```c#
@@ -183,7 +184,8 @@ Devuelve true or false
 
 ```
 
-**Operadores Lógicos**
+### Operadores Lógicos
+
 Devuelve true or false
 
 ```c#
