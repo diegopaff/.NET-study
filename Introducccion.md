@@ -1,6 +1,6 @@
 # Intruducción a C#
 
-### Comandos útiles de la consola.
+## Comandos útiles de la consola.
 
 Entradas y salidas por consola
 
@@ -11,7 +11,7 @@ Console.ReadLine(); //=> Pide un input desde la consola.
 
 ```
 
-### Variables y tipos de datos
+## Variables y tipos de datos
 
 - int -> Guarda números enteros (4 bytes) (desde -2147483648 a 2147483647)
 - long -> Guarda números enteros más grandes (8 bytes)
@@ -38,7 +38,7 @@ string nombre = "diego" // el string se guarda dentro de comillas dobles.
 
 ```
 
-### Conversión de datos
+## Conversión de datos
 
 **Implícita:**
 
@@ -61,7 +61,7 @@ Convert.ToInt32(valor); //ToInt32 convierte de string a entero
 
 ```
 
-### Constantes
+## Constantes
 
 utilizando la palabra reservada const antes de declarar la variable.
 Es un valor que no se puede cambiar o resasignar durante el resto del código. Sólo lectura.
@@ -83,7 +83,7 @@ string? a = null;
 
 ```
 
-### Strings
+## Strings
 
 Una variable string se inicializa con la palabra string
 
@@ -138,7 +138,7 @@ EscribirNumeroReal(float n)
 
 ```
 
-### Operadores
+## Operadores
 
 **Arigméticos**
 
@@ -193,7 +193,7 @@ Devuelve true or false
 
 ```
 
-### Estructura de Datos en C#
+## Estructura de Datos en C#
 
 **Definición:**
 
@@ -271,7 +271,7 @@ public static void Main()
 
 ```
 
-### CONDICIONALES
+## CONDICIONALES
 
 **if - else**
 
@@ -311,7 +311,7 @@ switch(c)
 - break: Termina la sección de iteración del bucle más próxima.
 - continue: Empieza una nueva interación del bucle más próximo.
 
-### BUCLES
+## BUCLES
 
 **Bucles, While, Do While, For**
 
@@ -319,7 +319,7 @@ switch(c)
 - Permiten bifurcar el flujo del4 programa de acuerdo a diversos escenarios.
 - Reducen las líneas de código que necesitamos ante tareas repetitivas.
 
-**while**
+### While
 
 ```c#
 // WHILE
@@ -333,7 +333,7 @@ while (j < 10)
 
 ```
 
-**for**
+### for
 
 ```c#
 // FOR
@@ -346,7 +346,8 @@ for (i = 0; i <10; i++)
 
 ```
 
-**Do..while**
+### Do..While
+
 La diferencia con while es que el do..while por lo menos ejecuta siempre una vez el código de adentro porque chequea la condición después.
 
 ```c#
@@ -362,7 +363,7 @@ while (j < 10);
 
 ```
 
-**Foreach**
+### Foreach
 
 Nos permite iterar facilmente en colecciones.
 Ventajas:
@@ -379,7 +380,7 @@ foreach (var elemento in names)
 
 ```
 
-**Math**
+### Clase Math
 
 ```c#
 
@@ -393,7 +394,7 @@ Math.Floor() // -> redondea hacia abajo
 
 ```
 
-### ARRAYS
+## ARRAYS
 
 ```c#
 // para declarar un array
@@ -419,7 +420,7 @@ int[,] miArray2D = new int[2,2]; // 1  2
                                  // 3  4
 ```
 
-### FUNCIONES
+## FUNCIONES
 
 ```c#
 calcularCuadrado(2); // --> 4
@@ -457,7 +458,7 @@ Console.WriteLine(string.Join(" " + squaredNumbers));
 
 ```
 
-### MÉTODOS
+## MÉTODOS
 
 Los métodos son funciones que se declaran adentro de un objeto. Se declaran igual.
 
@@ -504,7 +505,7 @@ class Motos
 }
 ```
 
-### RECURSIVIDAD
+## RECURSIVIDAD
 
 Es una función que se vuelve a llamar a ella misma hasta cumplir cierta condición.
 
@@ -524,7 +525,7 @@ class CalcularFactorial(int n)
 
 ```
 
-### (OPP) - Object Oriented Programmig
+## (OPP) - Object Oriented Programmig
 
 Se reduce una parte del problema a un objeto.
 Son una abstracción algo de la vida real. ( ej: clase Motos { color, modelo, marca, cilindros, etc.})
