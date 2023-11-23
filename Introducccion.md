@@ -129,7 +129,12 @@ Console.WriteLine(miCad.Trim()) // --> Hola es es un string
 // IndexOf
 int index = miCadena.IndexOf('m'); // ---> 10
 
-// Append
+// ToString -> convierte un number (int, double, float, decimal) a un string con formato
+float f = 3.1415f;
+EscribirNumeroReal(float n)
+{
+    Console.WriteLine(n.ToString("#.##")) // ---> "3.14"
+}
 
 ```
 
@@ -479,17 +484,12 @@ class Motos
 **Sobrecarga de métodos**
 Hay una definición para varios tipos de parámetros. Se crea el mismo método pero contemplando otros posibles tipos de valores de entrada y salida.
 
-Ejemplo
+Sólo se puede hacer adentro de una clase.
 
 ```c#
 
 class Motos
 {
-    public static void Arrancar() // al ser static puedo utilizarlo sin instanciar el objeto
-    {
-        Console.WriteLine("Arranca");
-    }
-
     public int EcharGasolina(int litros)     // si se ingresan int
     {                                        //         |
         int nivelDeposito = 20 + litros;     //         |
@@ -502,4 +502,66 @@ class Motos
         return nivelDeposito;
     }
 }
+```
+
+### RECURSIVIDAD
+
+Es una función que se vuelve a llamar a ella misma hasta cumplir cierta condición.
+
+Ejemplo: Calcular Factorial.
+
+```c#
+
+class CalcularFactorial(int n)
+{
+    if ( n == 1)
+    {
+        return 1;
+    }
+
+    return n * CalcularFactorial(n-1)
+}
+
+```
+
+### (OPP) - Object Oriented Programmig
+
+Se reduce una parte del problema a un objeto.
+Son una abstracción algo de la vida real. ( ej: clase Motos { color, modelo, marca, cilindros, etc.})
+
+Ejemplo, necesitamos una puerta.
+
+this. --> esto implica y apunto a la clase que lo contiene.
+
+```c#
+
+public class Puerta
+{
+    // ATRIBUTOS
+    int ancho;
+    int alto;
+    string material;
+    bool abierta;
+
+    // MÉTODOS
+    public void Abrir()
+    {
+        abierta = true;
+    }
+
+    public void Cerrar()
+    {
+        abierta = false;
+    }
+
+    public void MostrarEstado()
+    {
+        Console.WriteLine("Ancho: {0}", ancho);
+        Console.WriteLine("Alto: {0}", alto);
+        Console.WriteLine("Material: {0}", material);
+    }
+
+}
+
+
 ```
