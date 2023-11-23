@@ -462,7 +462,8 @@ Console.WriteLine(string.Join(" " + squaredNumbers));
 
 Los métodos son funciones que se declaran adentro de un objeto. Se declaran igual.
 
-**Métodos estáticos -> static**
+### Métodos estáticos -> static
+
 Es un método de clase, se puede usar aunque no se inicialize un objeto con esa clase. Se puede usar cuando no esta definido el objeto.
 
 ```c#
@@ -480,9 +481,11 @@ class Motos
         Console.WriteLine("Arranca");
     }
 }
+
 ```
 
-**Sobrecarga de métodos**
+### Sobrecarga de métodos
+
 Hay una definición para varios tipos de parámetros. Se crea el mismo método pero contemplando otros posibles tipos de valores de entrada y salida.
 
 Sólo se puede hacer adentro de una clase.
